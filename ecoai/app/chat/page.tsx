@@ -1,0 +1,123 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+
+interface Message {
+  role: "user" | "assistant";
+  content: string;
+}
+
+export default function Chat() {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, loading]);
+
+  async function send() {
+    const text = input.trim();
+    if (!text || loading) return;
+
+    const next: Message[] = [...messages, { role: "user", content: text }];
+    setMessages(next);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: next }),
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      const reply = data.choices?.[0]?.message?.content ?? "(no response)";
+      setMessages([...next, { role: "assistant", content: reply }]);
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : "Unknown error";
+      setMessages([...next, { role: "assistant", content: `⚠️ Error: ${msg}` }]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <main className="min-h-screen bg-green-50 flex flex-col">
+      <nav className="flex items-center justify-between px-8 py-4 border-b border-green-200 bg-white/70 backdrop-blur sticky top-0 z-10">
+        <Link href="/" className="text-xl font-bold text-green-800">🌿 EcoAI</Link>
+        <div className="flex gap-6 text-sm font-medium text-green-700">
+          <Link href="/leaderboard" className="hover:text-green-900 transition-colors">Leaderboard</Link>
+          <Link href="/chat" className="text-green-900 font-semibold underline underline-offset-4">Chat</Link>
+        </div>
+      </nav>
+
+      <div className="flex flex-col flex-1 max-w-2xl mx-auto w-full px-4 pb-6 pt-8 gap-4">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" />
+          <span className="text-sm font-semibold text-green-800">Mistral Small</span>
+          <span className="text-xs text-green-500 ml-1">🥇 Greenest model · ~0.0012 mg CO₂/query</span>
+        </div>
+
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto flex flex-col gap-3 min-h-0 max-h-[60vh]">
+          {messages.length === 0 && (
+            <div className="flex flex-col items-center justify-center flex-1 gap-3 py-16 text-center text-green-500">
+              <span className="text-5xl">🌿</span>
+              <p className="text-base font-medium text-green-700">Ask anything — with a clear conscience.</p>
+              <p className="text-sm">You&apos;re chatting with one of the most energy-efficient AI models available.</p>
+            </div>
+          )}
+          {messages.map((m, i) => (
+            <div
+              key={i}
+              className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
+            >
+              <div
+                className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
+                  m.role === "user"
+                    ? "bg-green-700 text-white rounded-br-sm"
+                    : "bg-white border border-green-200 text-green-900 rounded-bl-sm shadow-sm"
+                }`}
+              >
+                {m.content}
+              </div>
+            </div>
+          ))}
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-white border border-green-200 text-green-400 rounded-2xl rounded-bl-sm px-4 py-3 text-sm shadow-sm">
+                <span className="animate-pulse">Thinking…</span>
+              </div>
+            </div>
+          )}
+          <div ref={bottomRef} />
+        </div>
+
+        {/* Input */}
+        <form
+          onSubmit={(e) => { e.preventDefault(); send(); }}
+          className="flex gap-2 bg-white border border-green-200 rounded-2xl shadow-sm p-2"
+        >
+          <input
+            className="flex-1 bg-transparent outline-none px-3 py-2 text-sm text-green-900 placeholder-green-400"
+            placeholder="Send a message…"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            disabled={loading}
+          />
+          <button
+            type="submit"
+            disabled={loading || !input.trim()}
+            className="bg-green-700 text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-green-800 disabled:opacity-40 transition-colors"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </main>
+  );
+}
