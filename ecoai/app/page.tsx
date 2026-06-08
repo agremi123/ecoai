@@ -86,7 +86,8 @@ export default function Home() {
 
         {/* Leaderboard */}
         <div className="w-full max-w-lg flex flex-col gap-2">
-          <h2 className="text-sm font-bold text-green-700 text-center mb-1">🏆 Which AI pollutes the least?</h2>
+          <h2 className="text-sm font-bold text-green-700 text-center">🏆 Which AI pollutes the least?</h2>
+          <p className="text-xs text-green-500 text-center mb-1">Based on a one-line question & short answer</p>
           {models.map((m) => (
             <div key={m.name} className={`rounded-xl border-2 px-4 py-2.5 flex flex-col gap-1.5 ${m.color}`}>
               <div className="flex items-center justify-between gap-2">
