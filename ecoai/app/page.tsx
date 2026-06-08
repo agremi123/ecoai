@@ -80,7 +80,7 @@ export default function Home() {
             href="/chat"
             className="mt-1 bg-green-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-800 transition-colors shadow-md"
           >
-            Chat with the greenest AI →
+            Pick your AI below →
           </Link>
         </div>
 
