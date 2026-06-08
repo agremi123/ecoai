@@ -71,7 +71,7 @@ export default function Home() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/28580911/12426152_2560_1440_30fps.mp4" type="video/mp4" />
       </video>
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
