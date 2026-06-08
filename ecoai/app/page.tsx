@@ -71,7 +71,7 @@ export default function Home() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-trees-in-the-wind-1164-large.mp4" type="video/mp4" />
+        <source src="/12426153_3840_2160_30fps.mp4" type="video/mp4" />
       </video>
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
