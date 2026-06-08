@@ -50,8 +50,8 @@ const models = [
     bar: "w-full",
     color: "bg-yellow-50 border-yellow-300",
     impact: "🟠 Higher",
-    smarts: "🧠🧠🧠🧠",
-    smartsLabel: "Excellent",
+    smarts: "122",
+    smartsLabel: "IQ",
   },
 ];
 
