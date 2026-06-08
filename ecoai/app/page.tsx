@@ -11,8 +11,8 @@ const models = [
     bar: "w-[29%]",
     color: "bg-green-100 border-green-400",
     impact: "🟢 Very low",
-    smarts: "🧠🧠",
-    smartsLabel: "Good",
+    smarts: "100",
+    smartsLabel: "IQ",
   },
   {
     rank: 2,
