@@ -74,7 +74,7 @@ export default function Home() {
             The Greenest AI, at Your Fingertips
           </h1>
           <p className="text-sm text-green-600 max-w-md">
-            Compare AI models by CO₂ per query. Pick the most energy-efficient one and chat — without the climate guilt.
+            Every AI chatbot uses electricity — and some use way more than others. We rank them so you can pick the cleanest one.
           </p>
           <Link
             href="/chat"
