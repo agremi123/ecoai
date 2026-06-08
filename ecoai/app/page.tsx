@@ -129,8 +129,8 @@ export default function Home() {
               </div>
             </a>
           ))}
-          <p className="text-xs text-green-400 text-center mt-1">
-            <Link href="/leaderboard" className="underline">Full details →</Link>
+          <p className="text-xs text-white/50 text-center mt-1">
+            <Link href="/leaderboard" className="underline hover:text-white transition-colors">Full details →</Link>
           </p>
         </div>
       </div>
