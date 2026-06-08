@@ -24,8 +24,8 @@ const models = [
     bar: "w-[44%]",
     color: "bg-emerald-50 border-emerald-300",
     impact: "🟢 Low",
-    smarts: "🧠🧠🧠",
-    smartsLabel: "Very good",
+    smarts: "112",
+    smartsLabel: "IQ",
   },
   {
     rank: 3,
@@ -37,8 +37,8 @@ const models = [
     bar: "w-[61%]",
     color: "bg-teal-50 border-teal-300",
     impact: "🟡 Moderate",
-    smarts: "🧠🧠🧠",
-    smartsLabel: "Very good",
+    smarts: "112",
+    smartsLabel: "IQ",
   },
   {
     rank: 4,
