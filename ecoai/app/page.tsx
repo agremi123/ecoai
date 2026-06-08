@@ -62,7 +62,19 @@ const models = [
 
 export default function Home() {
   return (
-    <main className="h-screen flex flex-col bg-green-50 overflow-hidden">
+    <main className="h-screen flex flex-col overflow-hidden relative">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-trees-in-the-wind-1164-large.mp4" type="video/mp4" />
+      </video>
+      {/* Dark green overlay for readability */}
+      <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
       <nav className="flex items-center justify-between px-8 py-3 border-b border-green-200 bg-white/70 backdrop-blur shrink-0">
         <span className="text-lg font-bold text-green-800">🌿 EcoAI</span>
