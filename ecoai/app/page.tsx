@@ -82,14 +82,8 @@ export default function Home() {
             The Greenest AI, at Your Fingertips
           </h1>
           <p className="text-xs text-green-600 max-w-md">
-            Every AI chatbot uses electricity — and some use way more than others. We rank them so you can pick the cleanest one.
+            Every AI chatbot uses electricity — and some use way more than others. Click one below to start chatting with the cleanest one.
           </p>
-          <Link
-            href="/chat"
-            className="mt-1 bg-green-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-800 transition-colors shadow-md"
-          >
-            Pick your AI below →
-          </Link>
         </div>
 
         {/* Leaderboard */}
