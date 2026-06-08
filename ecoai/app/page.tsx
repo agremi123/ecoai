@@ -118,8 +118,8 @@ export default function Home() {
                     <span className="text-[10px] text-white/60">{m.smartsLabel}</span>
                   </div>
                   <div className="min-w-0">
-                    <span className="font-semibold text-green-900 text-sm">{m.name}</span>
-                    <span className="text-xs text-green-500 ml-1.5 hidden sm:inline">{m.blurb}</span>
+                    <span className="font-semibold text-white text-sm">{m.name}</span>
+                    <span className="text-xs text-white/60 ml-1.5 hidden sm:inline">{m.blurb}</span>
                   </div>
                 </div>
                 <span className="text-xs font-semibold text-green-800 shrink-0">{m.impact} →</span>
