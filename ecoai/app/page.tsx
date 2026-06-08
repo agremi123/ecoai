@@ -86,22 +86,23 @@ export default function Home() {
 
         {/* Leaderboard */}
         <div className="w-full max-w-lg flex flex-col gap-2">
-          <h2 className="text-sm font-bold text-green-700 text-center mb-1">🏆 Green Ranking — CO₂ per query</h2>
+          <h2 className="text-sm font-bold text-green-700 text-center mb-1">🏆 Which AI pollutes the least?</h2>
           {models.map((m) => (
             <div key={m.name} className={`rounded-xl border-2 px-4 py-2.5 flex flex-col gap-1.5 ${m.color}`}>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="text-base">{m.badge}</span>
-                  <span className="font-semibold text-green-900 text-sm">{m.name}</span>
-                  <span className="text-xs text-green-500">{m.provider}</span>
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-base shrink-0">{m.badge}</span>
+                  <div className="min-w-0">
+                    <span className="font-semibold text-green-900 text-sm">{m.name}</span>
+                    <span className="text-xs text-green-500 ml-1.5 hidden sm:inline">{m.blurb}</span>
+                  </div>
                 </div>
-                <span className="text-xs font-bold text-green-900">
-                  {(m.co2PerQuery * 1000).toFixed(2)} mg CO₂
-                </span>
+                <span className="text-xs font-semibold text-green-800 shrink-0">{m.impact}</span>
               </div>
               <div className="w-full bg-green-200/60 rounded-full h-1">
                 <div className={`bg-green-600 h-1 rounded-full ${m.bar}`} />
               </div>
+              <p className="text-xs text-green-600 sm:hidden">{m.blurb}</p>
             </div>
           ))}
           <p className="text-xs text-green-400 text-center mt-1">
