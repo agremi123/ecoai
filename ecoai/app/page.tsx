@@ -91,7 +91,13 @@ export default function Home() {
           <h2 className="text-sm font-bold text-green-700 text-center">🏆 Which AI pollutes the least?</h2>
           <p className="text-xs text-green-500 text-center mb-0.5">When you send a one-line question to the AI and the AI answers in 2–3 sentences</p>
           {models.map((m) => (
-            <div key={m.name} className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 ${m.color}`}>
+            <a
+              key={m.name}
+              href={m.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color}`}
+            >
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex flex-col items-center shrink-0 w-10">
@@ -103,13 +109,12 @@ export default function Home() {
                     <span className="text-xs text-green-500 ml-1.5 hidden sm:inline">{m.blurb}</span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-green-800 shrink-0">{m.impact}</span>
+                <span className="text-xs font-semibold text-green-800 shrink-0">{m.impact} →</span>
               </div>
               <div className="w-full bg-green-200/60 rounded-full h-1">
                 <div className={`bg-green-600 h-1 rounded-full ${m.bar}`} />
               </div>
-              <p className="text-xs text-green-600 sm:hidden">{m.blurb}</p>
-            </div>
+            </a>
           ))}
           <p className="text-xs text-green-400 text-center mt-1">
             <Link href="/leaderboard" className="underline">Full details →</Link>
