@@ -76,7 +76,7 @@ export default function Home() {
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
-      <nav className="flex items-center justify-between px-8 py-3 border-b border-green-200 bg-white/70 backdrop-blur shrink-0">
+      <nav className="relative z-10 flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
         <span className="text-lg font-bold text-green-800">🌿 EcoAI</span>
         <div className="flex gap-6 text-sm font-medium text-green-700">
           <Link href="/leaderboard" className="hover:text-green-900 transition-colors">Leaderboard</Link>
