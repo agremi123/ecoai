@@ -61,55 +61,7 @@ const models = [
 
 export default function Home() {
   return (
-    <main className="nature-bg h-screen flex flex-col overflow-hidden relative">
-      {/* Floating particles */}
-      {[
-        { left: "10%",  size: 6,  duration: "9s",  delay: "0s",   color: "#86efac" },
-        { left: "20%",  size: 4,  duration: "13s", delay: "2s",   color: "#6ee7b7" },
-        { left: "35%",  size: 8,  duration: "11s", delay: "1s",   color: "#bbf7d0" },
-        { left: "50%",  size: 5,  duration: "15s", delay: "4s",   color: "#a7f3d0" },
-        { left: "65%",  size: 7,  duration: "10s", delay: "0.5s", color: "#86efac" },
-        { left: "78%",  size: 4,  duration: "14s", delay: "3s",   color: "#d9f99d" },
-        { left: "88%",  size: 6,  duration: "12s", delay: "1.5s", color: "#6ee7b7" },
-        { left: "42%",  size: 3,  duration: "16s", delay: "5s",   color: "#bbf7d0" },
-        { left: "55%",  size: 9,  duration: "8s",  delay: "2.5s", color: "#a7f3d0" },
-        { left: "5%",   size: 5,  duration: "11s", delay: "6s",   color: "#86efac" },
-      ].map((p, i) => (
-        <span
-          key={i}
-          className="particle"
-          style={{
-            left: p.left,
-            bottom: "-10px",
-            width: p.size,
-            height: p.size,
-            background: p.color,
-            animationDuration: p.duration,
-            animationDelay: p.delay,
-          }}
-        />
-      ))}
-      {/* Floating leaves */}
-      {[
-        { left: "15%", top: "30%", duration: "6s",  delay: "0s" },
-        { left: "72%", top: "55%", duration: "8s",  delay: "1s" },
-        { left: "45%", top: "70%", duration: "7s",  delay: "3s" },
-        { left: "85%", top: "25%", duration: "9s",  delay: "2s" },
-        { left: "30%", top: "15%", duration: "5s",  delay: "4s" },
-      ].map((l, i) => (
-        <span
-          key={i}
-          className="leaf"
-          style={{
-            left: l.left,
-            top: l.top,
-            animationDuration: l.duration,
-            animationDelay: l.delay,
-          }}
-        >
-          🍃
-        </span>
-      ))}
+    <main className="h-screen flex flex-col bg-green-50 overflow-hidden">
       {/* Nav */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-3 border-b border-green-200 bg-white/40 backdrop-blur shrink-0">
         <span className="text-lg font-bold text-green-800">🌿 EcoAI</span>
