@@ -76,7 +76,7 @@ export default function Chat() {
           <div key={m.name} className={`rounded-2xl border-2 px-5 py-4 flex items-center justify-between gap-4 ${m.color}`}>
             <div className="flex items-center gap-3">
               <div className="flex flex-col items-center w-12 shrink-0">
-                <span className="text-sm">{m.smarts}</span>
+                <span className="text-sm font-bold text-green-900">{m.smarts}</span>
                 <span className="text-[10px] text-green-500">{m.smartsLabel}</span>
               </div>
               <div>
