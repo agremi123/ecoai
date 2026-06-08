@@ -62,7 +62,7 @@ const models = [
 
 export default function Home() {
   return (
-    <main className="h-screen flex flex-col overflow-hidden relative">
+    <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
       {/* Background video */}
       <video
         autoPlay
