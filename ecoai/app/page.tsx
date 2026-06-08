@@ -93,7 +93,7 @@ export default function Home() {
           <h2 className="text-sm font-bold text-green-700 text-center">🏆 Which AI pollutes the least?</h2>
           <p className="text-xs text-green-500 text-center mb-0.5">When you send a one-line question to the AI and the AI answers in 2–3 sentences</p>
           {models.map((m) => (
-            <div key={m.name} className={`rounded-xl border-2 px-4 py-2.5 flex flex-col gap-1.5 ${m.color}`}>
+            <div key={m.name} className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 ${m.color}`}>
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex flex-col items-center shrink-0 w-10">
