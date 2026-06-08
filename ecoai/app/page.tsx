@@ -52,7 +52,7 @@ const models = [
     co2PerQuery: 0.0041,
     badge: "⚡",
     bar: "w-full",
-    color: "bg-yellow-50 border-yellow-300 hover:border-yellow-500",
+    color: "bg-white/20 backdrop-blur border-white/40 hover:bg-white/30",
     impact: "🟠 Higher",
     smarts: "122",
     smartsLabel: "IQ",
