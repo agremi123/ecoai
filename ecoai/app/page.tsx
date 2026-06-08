@@ -122,7 +122,7 @@ export default function Home() {
                     <span className="text-xs text-white/60 ml-1.5 hidden sm:inline">{m.blurb}</span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-green-800 shrink-0">{m.impact} →</span>
+                <span className="text-xs font-semibold text-white/80 shrink-0">{m.impact} →</span>
               </div>
               <div className="w-full bg-green-200/60 rounded-full h-1">
                 <div className={`bg-green-600 h-1 rounded-full ${m.bar}`} />
