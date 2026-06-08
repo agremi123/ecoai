@@ -68,16 +68,16 @@ export default function Home() {
       </nav>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col items-center justify-center px-6 gap-6 min-h-0">
+      <div className="flex flex-1 flex-col items-center justify-center px-6 gap-4 min-h-0">
         {/* Hero */}
-        <div className="flex flex-col items-center text-center gap-2">
+        <div className="flex flex-col items-center text-center gap-1.5">
           <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full border border-green-200">
             🌍 AI with a smaller footprint
           </div>
-          <h1 className="text-4xl font-extrabold text-green-900 leading-tight">
+          <h1 className="text-3xl font-extrabold text-green-900 leading-tight">
             The Greenest AI, at Your Fingertips
           </h1>
-          <p className="text-sm text-green-600 max-w-md">
+          <p className="text-xs text-green-600 max-w-md">
             Every AI chatbot uses electricity — and some use way more than others. We rank them so you can pick the cleanest one.
           </p>
           <Link
