@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           ))}
           <p className="text-xs text-green-400 text-center mt-1">
-            Estimated · <Link href="/leaderboard" className="underline">Full details →</Link>
+            <Link href="/leaderboard" className="underline">Full details →</Link>
           </p>
         </div>
       </div>
