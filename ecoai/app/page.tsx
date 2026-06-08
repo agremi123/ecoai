@@ -96,7 +96,10 @@ export default function Home() {
             <div key={m.name} className={`rounded-xl border-2 px-4 py-2.5 flex flex-col gap-1.5 ${m.color}`}>
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="text-base shrink-0">{m.badge}</span>
+                  <div className="flex flex-col items-center shrink-0 w-10">
+                    <span className="text-xs">{m.smarts}</span>
+                    <span className="text-[10px] text-green-500">{m.smartsLabel}</span>
+                  </div>
                   <div className="min-w-0">
                     <span className="font-semibold text-green-900 text-sm">{m.name}</span>
                     <span className="text-xs text-green-500 ml-1.5 hidden sm:inline">{m.blurb}</span>
