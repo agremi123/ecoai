@@ -1,52 +1,55 @@
-"use client";
-
-import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-interface Message {
-  role: "user" | "assistant";
-  content: string;
-}
+const models = [
+  {
+    rank: 1,
+    name: "Mistral Small",
+    provider: "Mistral AI",
+    badge: "🥇",
+    impact: "🟢 Greenest",
+    blurb: "Like sending a text message",
+    url: "https://chat.mistral.ai",
+    color: "bg-green-100 border-green-400",
+    btnColor: "bg-green-700 hover:bg-green-800",
+  },
+  {
+    rank: 2,
+    name: "Claude Haiku",
+    provider: "Anthropic",
+    badge: "🥈",
+    impact: "🟢 Very low",
+    blurb: "Like leaving a light on for 2 seconds",
+    url: "https://claude.ai",
+    color: "bg-emerald-50 border-emerald-300",
+    btnColor: "bg-emerald-700 hover:bg-emerald-800",
+  },
+  {
+    rank: 3,
+    name: "Gemini Flash",
+    provider: "Google",
+    badge: "🥉",
+    impact: "🟡 Moderate",
+    blurb: "Like a Google search × 2",
+    url: "https://gemini.google.com",
+    color: "bg-teal-50 border-teal-300",
+    btnColor: "bg-teal-700 hover:bg-teal-800",
+  },
+  {
+    rank: 4,
+    name: "GPT-4o Mini",
+    provider: "OpenAI",
+    badge: "⚡",
+    impact: "🟠 Higher",
+    blurb: "Like watching 3 seconds of YouTube",
+    url: "https://chatgpt.com",
+    color: "bg-yellow-50 border-yellow-300",
+    btnColor: "bg-yellow-600 hover:bg-yellow-700",
+  },
+];
 
 export default function Chat() {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, loading]);
-
-  async function send() {
-    const text = input.trim();
-    if (!text || loading) return;
-
-    const next: Message[] = [...messages, { role: "user", content: text }];
-    setMessages(next);
-    setInput("");
-    setLoading(true);
-
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: next }),
-      });
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
-      const reply = data.choices?.[0]?.message?.content ?? "(no response)";
-      setMessages([...next, { role: "assistant", content: reply }]);
-    } catch (e: unknown) {
-      const msg = e instanceof Error ? e.message : "Unknown error";
-      setMessages([...next, { role: "assistant", content: `⚠️ Error: ${msg}` }]);
-    } finally {
-      setLoading(false);
-    }
-  }
-
   return (
-    <main className="min-h-screen bg-green-50 flex flex-col">
+    <main className="min-h-screen bg-green-50">
       <nav className="flex items-center justify-between px-8 py-4 border-b border-green-200 bg-white/70 backdrop-blur sticky top-0 z-10">
         <Link href="/" className="text-xl font-bold text-green-800">🌿 EcoAI</Link>
         <div className="flex gap-6 text-sm font-medium text-green-700">
@@ -55,68 +58,38 @@ export default function Chat() {
         </div>
       </nav>
 
-      <div className="flex flex-col flex-1 max-w-2xl mx-auto w-full px-4 pb-6 pt-8 gap-4">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" />
-          <span className="text-sm font-semibold text-green-800">Mistral Small</span>
-          <span className="text-xs text-green-500 ml-1">🥇 Greenest model · ~0.0012 mg CO₂/query</span>
+      <div className="max-w-2xl mx-auto px-6 py-16 flex flex-col gap-6">
+        <div className="text-center flex flex-col gap-2 mb-4">
+          <h1 className="text-3xl font-extrabold text-green-900">Start chatting</h1>
+          <p className="text-green-600 text-sm">Pick the AI you want to use. We recommend starting with the greenest one.</p>
         </div>
 
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto flex flex-col gap-3 min-h-0 max-h-[60vh]">
-          {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center flex-1 gap-3 py-16 text-center text-green-500">
-              <span className="text-5xl">🌿</span>
-              <p className="text-base font-medium text-green-700">Ask anything — with a clear conscience.</p>
-              <p className="text-sm">You&apos;re chatting with one of the most energy-efficient AI models available.</p>
+        {models.map((m) => (
+          <div key={m.name} className={`rounded-2xl border-2 px-5 py-4 flex items-center justify-between gap-4 ${m.color}`}>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">{m.badge}</span>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-green-900">{m.name}</span>
+                  <span className="text-xs text-green-500">{m.provider}</span>
+                </div>
+                <div className="text-xs text-green-600">{m.impact} · {m.blurb}</div>
+              </div>
             </div>
-          )}
-          {messages.map((m, i) => (
-            <div
-              key={i}
-              className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
+            <a
+              href={m.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`shrink-0 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors ${m.btnColor}`}
             >
-              <div
-                className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
-                  m.role === "user"
-                    ? "bg-green-700 text-white rounded-br-sm"
-                    : "bg-white border border-green-200 text-green-900 rounded-bl-sm shadow-sm"
-                }`}
-              >
-                {m.content}
-              </div>
-            </div>
-          ))}
-          {loading && (
-            <div className="flex justify-start">
-              <div className="bg-white border border-green-200 text-green-400 rounded-2xl rounded-bl-sm px-4 py-3 text-sm shadow-sm">
-                <span className="animate-pulse">Thinking…</span>
-              </div>
-            </div>
-          )}
-          <div ref={bottomRef} />
-        </div>
+              Open →
+            </a>
+          </div>
+        ))}
 
-        {/* Input */}
-        <form
-          onSubmit={(e) => { e.preventDefault(); send(); }}
-          className="flex gap-2 bg-white border border-green-200 rounded-2xl shadow-sm p-2"
-        >
-          <input
-            className="flex-1 bg-transparent outline-none px-3 py-2 text-sm text-green-900 placeholder-green-400"
-            placeholder="Send a message…"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            disabled={loading}
-          />
-          <button
-            type="submit"
-            disabled={loading || !input.trim()}
-            className="bg-green-700 text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-green-800 disabled:opacity-40 transition-colors"
-          >
-            Send
-          </button>
-        </form>
+        <p className="text-xs text-green-400 text-center mt-2">
+          You&apos;ll be taken to each AI&apos;s official website. Free accounts available on all platforms.
+        </p>
       </div>
     </main>
   );
