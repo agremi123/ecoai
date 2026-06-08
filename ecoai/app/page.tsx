@@ -97,7 +97,7 @@ export default function Home() {
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex flex-col items-center shrink-0 w-10">
-                    <span className="text-xs">{m.smarts}</span>
+                    <span className="text-sm font-bold text-green-900">{m.smarts}</span>
                     <span className="text-[10px] text-green-500">{m.smartsLabel}</span>
                   </div>
                   <div className="min-w-0">
