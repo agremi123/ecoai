@@ -23,7 +23,7 @@ const models = [
     co2PerQuery: 0.0018,
     badge: "🥈",
     bar: "w-[44%]",
-    color: "bg-white/50 backdrop-blur border-emerald-300 hover:border-emerald-500",
+    color: "bg-emerald-50 border-emerald-300 hover:border-emerald-500",
     impact: "🟢 Low",
     smarts: "112",
     smartsLabel: "IQ",
