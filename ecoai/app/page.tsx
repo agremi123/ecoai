@@ -101,8 +101,8 @@ export default function Home() {
 
         {/* Leaderboard */}
         <div className="w-full max-w-lg flex flex-col gap-1.5">
-          <h2 className="text-sm font-bold text-green-700 text-center">🏆 Which AI pollutes the least?</h2>
-          <p className="text-xs text-green-500 text-center mb-0.5">When you send a one-line question to the AI and the AI answers in 2–3 sentences</p>
+          <h2 className="text-sm font-bold text-white text-center drop-shadow">🏆 Which AI pollutes the least?</h2>
+          <p className="text-xs text-white/70 text-center mb-0.5">When you send a one-line question to the AI and the AI answers in 2–3 sentences</p>
           {models.map((m) => (
             <a
               key={m.name}
