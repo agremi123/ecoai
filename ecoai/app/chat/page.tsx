@@ -117,7 +117,7 @@ export default function Chat() {
             disabled={loading || !input.trim()}
             className="bg-green-700 text-white px-5 py-2 rounded-xl text-sm font-semibold hover:bg-green-800 disabled:opacity-40 transition-colors"
           >
-            Send
+            {t("chat_send")}
           </button>
         </form>
       </div>
