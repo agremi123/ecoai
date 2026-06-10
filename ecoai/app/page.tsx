@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* Nav */}
       <nav className="relative z-[10] flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
-        <span className="text-lg font-bold text-white">🌿 Green AI</span>
+        <span className="text-lg font-bold text-white">🌿 GreenGPT</span>
         <div className="flex items-center gap-6 text-sm font-medium text-white/80">
           <Link href="/leaderboard" className="hover:text-white transition-colors">{t("nav_leaderboard")}</Link>
           <Link href="/chat" className="hover:text-white transition-colors">{t("nav_chat")}</Link>
@@ -140,14 +140,20 @@ export default function Home() {
             {/* Ranking preview */}
             <div className="w-full flex flex-col gap-1 mt-1">
               {models.map((m) => (
-                <div key={m.name} className={`rounded-xl border px-3 py-1.5 flex items-center gap-2 bg-white/20 backdrop-blur ${m.rank === 1 ? "border-green-400/60" : "border-white/25"}`}>
+                <a
+                  key={m.name}
+                  href={m.url}
+                  target={m.url.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className={`rounded-xl border px-3 py-1.5 flex items-center gap-2 bg-white/20 backdrop-blur hover:bg-white/30 transition-all cursor-pointer ${m.rank === 1 ? "border-green-400/60" : "border-white/25"}`}
+                >
                   <span className="text-sm leading-none shrink-0">{m.badge}</span>
                   <span className="font-semibold text-white text-xs flex-1">{m.name}</span>
                   <div className="w-16 bg-green-200/30 rounded-full h-1 shrink-0">
                     <div className={`bg-green-400 h-1 rounded-full ${m.bar}`} />
                   </div>
-                  <span className="text-xs text-white/55 shrink-0">{(m.co2PerQuery * 1000).toFixed(1)} mg CO₂</span>
-                </div>
+                  <span className="text-xs text-white/55 shrink-0">{(m.co2PerQuery * 1000).toFixed(1)} mg CO₂ →</span>
+                </a>
               ))}
             </div>
             <p className="text-xs text-white/50 text-center">
