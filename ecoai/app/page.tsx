@@ -14,7 +14,7 @@ const models = [
     impact: "🟢 Very low",
     smarts: "⭐⭐",
     smartsLabel: "Smart",
-    url: "https://chat.mistral.ai",
+    url: "/chat",
   },
   {
     rank: 2,
