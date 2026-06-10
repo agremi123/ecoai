@@ -54,8 +54,8 @@ const models = [
     bar: "w-full",
     color: "bg-white/20 backdrop-blur border-white/40 hover:bg-white/30",
     impact: "🟠 Higher",
-    smarts: "122",
-    smartsLabel: "IQ",
+    smarts: "⭐⭐⭐⭐",
+    smartsLabel: "Smartest",
     url: "https://chatgpt.com",
   },
 ];
