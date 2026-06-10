@@ -321,7 +321,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     nav_leaderboard: "ランキング",
     nav_chat: "チャット",
     badge: "🌍 環境にやさしいAI",
-    title: "最もグリーンなAIを、あなたの手に",
+    title: "最もグリーンなAI、同じクオリティで",
     subtitle: "AIチャットボットは電力を消費します。その量はモデルによって大きく異なります。下をクリックして、最もクリーンなAIとチャットしましょう。",
     ranking_title: "🏆 どのAIが最も汚染が少ない？",
     ranking_subtitle: "1行の質問を送り、AIが2〜3文で答える場合",
