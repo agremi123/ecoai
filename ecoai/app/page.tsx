@@ -26,7 +26,7 @@ const activities = [
 const models = [
   {
     rank: 1,
-    name: "GreenGPT",
+    name: "Mistral Small",
     provider: "Mistral AI",
     blurbKey: "blurb_mistral",
     co2PerQuery: 0.0012,
