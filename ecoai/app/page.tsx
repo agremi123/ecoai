@@ -1,6 +1,16 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { useLang, LanguagePicker } from "./i18n";
+
+const activities = [
+  { id: "write",     icon: "✍️", key: "activity_write" },
+  { id: "chat",      icon: "💬", key: "activity_chat" },
+  { id: "translate", icon: "🌍", key: "activity_translate" },
+  { id: "summarize", icon: "📝", key: "activity_summarize" },
+  { id: "code",      icon: "💻", key: "activity_code" },
+  { id: "create",    icon: "🎨", key: "activity_create" },
+];
 
 const models = [
   {
@@ -55,9 +65,11 @@ const models = [
 
 export default function Home() {
   const { t } = useLang();
+  const [activity, setActivity] = useState<string | null>(null);
+
   return (
     <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
-      {/* Background video — self-hosted, instant HD, no YouTube UI */}
+      {/* Background video */}
       <video
         autoPlay
         muted
@@ -69,8 +81,8 @@ export default function Home() {
       >
         <source src="/bg.mp4" type="video/mp4" />
       </video>
-      {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-[3]" />
+
       {/* Nav */}
       <nav className="relative z-[10] flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
         <span className="text-lg font-bold text-white">🌿 Green AI</span>
@@ -82,52 +94,102 @@ export default function Home() {
       </nav>
 
       {/* Content */}
-      <div className="relative z-[10] flex flex-1 flex-col items-center justify-center px-6 gap-4 min-h-0">
+      <div className="relative z-[10] flex flex-1 flex-col items-center justify-center px-6 gap-3 min-h-0">
         {/* Hero */}
-        <div className="flex flex-col items-center text-center gap-1.5">
+        <div className="flex flex-col items-center text-center gap-1">
           <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full border border-white/30 backdrop-blur">
             {t("badge")}
           </div>
           <h1 className="text-3xl font-extrabold text-white leading-tight drop-shadow-lg">
             {t("title")}
           </h1>
-          <p className="text-xs text-white/80 max-w-md drop-shadow">
-            {t("subtitle")}
-          </p>
         </div>
 
-        {/* Leaderboard */}
-        <div className="w-full max-w-lg flex flex-col gap-1.5">
-          <h2 className="text-sm font-bold text-white text-center drop-shadow">{t("ranking_title")}</h2>
-          <p className="text-xs text-white/70 text-center mb-0.5">{t("ranking_subtitle")}</p>
-          {models.map((m) => (
-            <a
-              key={m.name}
-              href={m.url}
-              target={m.url.startsWith("http") ? "_blank" : undefined}
-              rel="noopener noreferrer"
-              className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color}`}
-            >
+        {activity === null ? (
+          /* Step 1 — Activity picker */
+          <div className="w-full max-w-lg flex flex-col gap-2">
+            <h2 className="text-sm font-bold text-white text-center drop-shadow">{t("activity_prompt")}</h2>
+            <div className="grid grid-cols-3 gap-2">
+              {activities.map((a) => (
+                <button
+                  key={a.id}
+                  onClick={() => setActivity(a.id)}
+                  className="flex flex-col items-center gap-1 bg-white/20 backdrop-blur border border-white/40 hover:bg-white/30 active:bg-white/40 rounded-xl px-3 py-3 transition-all cursor-pointer"
+                >
+                  <span className="text-2xl leading-none">{a.icon}</span>
+                  <span className="text-xs font-medium text-white text-center leading-tight">{t(a.key)}</span>
+                </button>
+              ))}
+            </div>
+            <p className="text-xs text-white/50 text-center mt-0.5">
+              <Link href="/leaderboard" className="underline hover:text-white transition-colors">{t("full_details")}</Link>
+            </p>
+          </div>
+        ) : (
+          /* Step 2 — Recommendation + leaderboard */
+          <>
+            {/* Recommendation card */}
+            <div className="w-full max-w-lg bg-green-500/25 backdrop-blur border border-green-400/50 rounded-xl px-4 py-3 flex flex-col gap-1">
+              <p className="text-xs text-white/60">{t("recommend_intro")}</p>
               <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2 min-w-0">
-                  <div className="min-w-0">
-                    <span className="font-semibold text-white text-sm">{m.name}</span>
-                    <span className="text-xs text-white/60 ml-1.5 hidden sm:inline">{t(m.blurbKey)}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg leading-none">🥇</span>
+                  <div>
+                    <span className="text-base font-bold text-white">Mistral Small</span>
+                    <span className="text-xs text-white/50 ml-1.5">· Mistral AI</span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-white/80 shrink-0">
-                  {t(m.impactKey)} <span className="text-white/60 font-normal">· {(m.co2PerQuery * 1000).toFixed(1)} mg CO₂</span> →
-                </span>
+                <a
+                  href="/chat"
+                  className="bg-green-500 hover:bg-green-400 text-white text-xs font-semibold px-4 py-1.5 rounded-lg transition-colors shrink-0"
+                >
+                  {t("try_it")} →
+                </a>
               </div>
-              <div className="w-full bg-green-200/60 rounded-full h-1">
-                <div className={`bg-green-600 h-1 rounded-full ${m.bar}`} />
-              </div>
-            </a>
-          ))}
-          <p className="text-xs text-white/50 text-center mt-1">
-            <Link href="/leaderboard" className="underline hover:text-white transition-colors">{t("full_details")}</Link>
-          </p>
-        </div>
+              <p className="text-xs text-white/75">{t(`proof_${activity}`)}</p>
+              <button
+                onClick={() => setActivity(null)}
+                className="text-xs text-white/40 hover:text-white/70 transition-colors text-left mt-0.5"
+              >
+                ← {t("activity_reset")}
+              </button>
+            </div>
+
+            {/* Leaderboard */}
+            <div className="w-full max-w-lg flex flex-col gap-1.5">
+              {models.map((m) => (
+                <a
+                  key={m.name}
+                  href={m.url}
+                  target={m.url.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color} ${m.rank === 1 ? "border-green-400/60" : ""}`}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-base leading-none shrink-0">{m.badge}</span>
+                      <div className="min-w-0">
+                        <span className="font-semibold text-white text-sm">{m.name}</span>
+                        {m.rank === 1 && (
+                          <span className="text-xs font-semibold text-green-300 ml-2">{t("best_for_you")}</span>
+                        )}
+                      </div>
+                    </div>
+                    <span className="text-xs font-semibold text-white/80 shrink-0">
+                      {t(m.impactKey)} <span className="text-white/60 font-normal">· {(m.co2PerQuery * 1000).toFixed(1)} mg CO₂</span> →
+                    </span>
+                  </div>
+                  <div className="w-full bg-green-200/60 rounded-full h-1">
+                    <div className={`bg-green-600 h-1 rounded-full ${m.bar}`} />
+                  </div>
+                </a>
+              ))}
+              <p className="text-xs text-white/50 text-center mt-0.5">
+                <Link href="/leaderboard" className="underline hover:text-white transition-colors">{t("full_details")}</Link>
+              </p>
+            </div>
+          </>
+        )}
       </div>
 
       <footer className="relative z-[10] text-center py-2 text-xs text-white/50 border-t border-white/20 bg-black/20 backdrop-blur shrink-0">
