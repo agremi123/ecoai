@@ -40,8 +40,8 @@ const models = [
     bar: "w-[61%]",
     color: "bg-white/20 backdrop-blur border-white/40 hover:bg-white/30",
     impact: "🟡 Moderate",
-    smarts: "112",
-    smartsLabel: "IQ",
+    smarts: "⭐⭐⭐",
+    smartsLabel: "Smarter",
     url: "https://gemini.google.com",
   },
   {
