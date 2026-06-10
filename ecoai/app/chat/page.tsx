@@ -107,7 +107,7 @@ export default function Chat() {
         >
           <input
             className="flex-1 bg-transparent outline-none px-3 py-2 text-sm text-green-900 placeholder-green-400"
-            placeholder="Send a message…"
+            placeholder={t("chat_placeholder")}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={loading}
