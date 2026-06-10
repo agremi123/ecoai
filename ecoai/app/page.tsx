@@ -77,7 +77,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
-        <span className="text-lg font-bold text-white">🌿 EcoAI</span>
+        <span className="text-lg font-bold text-white">🌿 Green AI</span>
         <div className="flex gap-6 text-sm font-medium text-white/80">
           <Link href="/leaderboard" className="hover:text-white transition-colors">Leaderboard</Link>
           <Link href="/chat" className="hover:text-white transition-colors">Chat</Link>
