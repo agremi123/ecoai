@@ -250,7 +250,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     chat_placeholder: "Envie uma mensagem…",
     chat_send: "Enviar",
     chat_thinking: "Pensando…",
-    activity_prompt: "O que você quer fazer?",
+    activity_prompt: "Para que você usará IA? Mostraremos a opção mais verde — mesma qualidade, menos energia.",
     activity_write: "Escrever algo",
     activity_chat: "Fazer perguntas",
     activity_translate: "Traduzir",
