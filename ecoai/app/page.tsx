@@ -91,7 +91,7 @@ export default function Home() {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 gap-4 min-h-0">
+      <div className="relative z-[10] flex flex-1 flex-col items-center justify-center px-6 gap-4 min-h-0">
         {/* Hero */}
         <div className="flex flex-col items-center text-center gap-1.5">
           <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full border border-white/30 backdrop-blur">
