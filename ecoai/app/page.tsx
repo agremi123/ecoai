@@ -119,10 +119,6 @@ export default function Home() {
             >
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 min-w-0">
-                  <div className="flex flex-col items-center shrink-0 w-16">
-                    <span className="text-xs tracking-tight">{m.smarts}</span>
-                    <span className="text-[10px] text-white/60">{m.smartsLabel}</span>
-                  </div>
                   <div className="min-w-0">
                     <span className="font-semibold text-white text-sm">{m.name}</span>
                     <span className="text-xs text-white/60 ml-1.5 hidden sm:inline">{m.blurb}</span>
