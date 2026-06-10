@@ -166,7 +166,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     chat_placeholder: "Nachricht senden…",
     chat_send: "Senden",
     chat_thinking: "Denke nach…",
-    activity_prompt: "Was möchten Sie tun?",
+    activity_prompt: "Wofür nutzen Sie KI? Wir zeigen Ihnen die grünste Option — gleiche Qualität, weniger Energie.",
     activity_write: "Schreiben",
     activity_chat: "Fragen stellen",
     activity_translate: "Übersetzen",
