@@ -186,7 +186,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_summarize: "Fasst jeden Text präzise zusammen — viel umweltfreundlicher",
     proof_code: "Hilft genauso gut beim Coden & Debuggen — die grünste Option",
     proof_create: "Generiert genauso kreative Ideen — bei einem Bruchteil der Energie",
-    co2_saved: "🌱 2,9 mg CO₂ gespart vs. ChatGPT",
+    co2_saved: "🌱 {{amount}} mg CO₂ gespart vs. ChatGPT",
   },
   it: {
     nav_leaderboard: "Classifica",
