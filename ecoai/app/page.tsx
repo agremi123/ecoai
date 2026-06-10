@@ -8,7 +8,7 @@ const activityRankings: Record<string, string[]> = {
   chat:      ["Mistral Small", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
   translate: ["Gemini Flash", "Mistral Small", "Claude Haiku", "GPT-4o Mini"],
   summarize: ["Claude Haiku", "Mistral Small", "Gemini Flash", "GPT-4o Mini"],
-  code:      ["Mistral Small", "GPT-4o Mini", "Claude Haiku", "Gemini Flash"],
+  advice:    ["Mistral Small", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
   create:    ["Claude Haiku", "Mistral Small", "Gemini Flash", "GPT-4o Mini"],
 };
 
