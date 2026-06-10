@@ -78,6 +78,11 @@ export default function Home() {
   const { t } = useLang();
   const [activity, setActivity] = useState<string | null>(null);
 
+  const ranked = activity
+    ? activityRankings[activity].map((name) => models.find((m) => m.name === name)!)
+    : models;
+  const top = ranked[0];
+
   return (
     <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
       {/* Background video */}
