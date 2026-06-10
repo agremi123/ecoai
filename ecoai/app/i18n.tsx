@@ -358,6 +358,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_summarize: "どんなテキストも精密に要約 — はるかに環境にやさしい",
     proof_code: "コードとデバッグを同じくらいうまく補助 — 最もグリーンな選択",
     proof_create: "同じくらい豊かな創造的アイデア — わずかなエネルギーで",
+    co2_saved: "🌱 ChatGPT より 2.9 mg CO₂ 節約",
   },
 };
 
