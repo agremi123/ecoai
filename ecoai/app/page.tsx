@@ -63,17 +63,22 @@ const models = [
 export default function Home() {
   return (
     <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
-      {/* Background YouTube video */}
+      {/* Thumbnail shown instantly while video loads */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('https://img.youtube.com/vi/Ul6FvHnaZZc/maxresdefault.jpg')` }}
+      />
+      {/* YouTube iframe fades in on load */}
       <iframe
-        className="absolute z-0 pointer-events-none"
+        className="absolute z-[1] pointer-events-none transition-opacity duration-1000"
         style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(1.5)", width: "100vw", height: "56.25vw", minHeight: "100vh", minWidth: "177.78vh" }}
         src="https://www.youtube.com/embed/Ul6FvHnaZZc?autoplay=1&mute=1&loop=1&playlist=Ul6FvHnaZZc&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&vq=hd1080"
         allow="autoplay; encrypted-media"
         title="background"
         loading="eager"
       />
-      {/* Blocks YouTube UI overlays */}
-      <div className="absolute inset-0 z-[1] pointer-events-none" />
+      {/* Blocks all YouTube UI (pause button, logo, etc) */}
+      <div className="absolute inset-0 z-[2]" />
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
