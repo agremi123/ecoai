@@ -164,12 +164,14 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <span className="text-lg leading-none">🥇</span>
                   <div>
-                    <span className="text-base font-bold text-white">Mistral Small</span>
-                    <span className="text-xs text-white/50 ml-1.5">· Mistral AI</span>
+                    <span className="text-base font-bold text-white">{top.name}</span>
+                    <span className="text-xs text-white/50 ml-1.5">· {top.provider}</span>
                   </div>
                 </div>
                 <a
-                  href="/chat"
+                  href={top.url}
+                  target={top.url.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-400 text-white text-xs font-semibold px-4 py-1.5 rounded-lg transition-colors shrink-0"
                 >
                   {t("try_it")} →
