@@ -136,7 +136,7 @@ export default function Home() {
       </div>
 
       <footer className="relative z-10 text-center py-2 text-xs text-white/50 border-t border-white/20 bg-black/20 backdrop-blur shrink-0">
-        EcoAI — making AI choices greener, one query at a time.
+        Green AI — making AI choices greener, one query at a time.
       </footer>
     </main>
   );
