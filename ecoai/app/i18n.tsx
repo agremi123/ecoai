@@ -260,7 +260,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     activity_chat: "Fazer perguntas",
     activity_translate: "Traduzir",
     activity_summarize: "Resumir",
-    activity_code: "Ajuda com código",
+    activity_advice: "Pedir conselho",
     activity_create: "Obter ideias",
     activity_reset: "Mudar atividade",
     recommend_intro: "Para isso, recomendamos:",
