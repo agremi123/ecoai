@@ -67,10 +67,13 @@ export default function Home() {
       <iframe
         className="absolute z-0 pointer-events-none"
         style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(1.5)", width: "100vw", height: "56.25vw", minHeight: "100vh", minWidth: "177.78vh" }}
-        src="https://www.youtube.com/embed/Ul6FvHnaZZc?autoplay=1&mute=1&loop=1&playlist=Ul6FvHnaZZc&controls=0&showinfo=0&rel=0&modestbranding=1"
+        src="https://www.youtube.com/embed/Ul6FvHnaZZc?autoplay=1&mute=1&loop=1&playlist=Ul6FvHnaZZc&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&vq=hd1080"
         allow="autoplay; encrypted-media"
         title="background"
+        loading="eager"
       />
+      {/* Blocks YouTube UI overlays */}
+      <div className="absolute inset-0 z-[1] pointer-events-none" />
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
