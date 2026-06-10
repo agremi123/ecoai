@@ -278,7 +278,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     nav_leaderboard: "排行榜",
     nav_chat: "聊天",
     badge: "🌍 更低碳的人工智能",
-    title: "最环保的 AI，触手可及",
+    title: "最环保的 AI，同样的效果",
     subtitle: "每个 AI 聊天机器人都耗电——有些耗电量远超其他。点击下方，与最清洁的 AI 聊天。",
     ranking_title: "🏆 哪个 AI 污染最少？",
     ranking_subtitle: "当你发送一行问题，AI 用 2–3 句话回答时",
