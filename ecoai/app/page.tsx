@@ -113,7 +113,7 @@ export default function Home() {
             <a
               key={m.name}
               href={m.url}
-              target="_blank"
+              target={m.url.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
               className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color}`}
             >
