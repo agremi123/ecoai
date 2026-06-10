@@ -184,7 +184,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_chat: "Beantwortet Fragen genauso klar — 3× weniger Energie als ChatGPT",
     proof_translate: "Übersetzt 30+ Sprachen genau — mit minimalem CO₂-Fußabdruck",
     proof_summarize: "Fasst jeden Text präzise zusammen — viel umweltfreundlicher",
-    proof_code: "Hilft genauso gut beim Coden & Debuggen — die grünste Option",
+    proof_advice: "Gibt klare, durchdachte Ratschläge — wie ChatGPT, 3× weniger Energie",
     proof_create: "Generiert genauso kreative Ideen — bei einem Bruchteil der Energie",
     co2_saved: "🌱 {{amount}} mg CO₂ gespart vs. ChatGPT",
   },
