@@ -10,6 +10,7 @@ interface Message {
 }
 
 export default function Chat() {
+  const { t } = useLang();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
