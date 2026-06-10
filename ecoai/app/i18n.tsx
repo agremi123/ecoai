@@ -334,7 +334,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     chat_placeholder: "メッセージを送信…",
     chat_send: "送信",
     chat_thinking: "考え中…",
-    activity_prompt: "何をしたいですか？",
+    activity_prompt: "AIで何をしますか？同じ品質で最もグリーンな選択肢をお見せします。",
     activity_write: "文章を書く",
     activity_chat: "質問する",
     activity_translate: "翻訳する",
