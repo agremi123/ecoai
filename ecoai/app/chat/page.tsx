@@ -48,30 +48,44 @@ export default function Chat() {
   }
 
   return (
-    <main className="h-screen bg-green-50 flex flex-col overflow-hidden">
-      <nav className="flex items-center justify-between px-8 py-4 border-b border-green-200 bg-white/70 backdrop-blur shrink-0">
-        <Link href="/" className="text-xl font-bold text-green-800">🌿 Green AI</Link>
-        <div className="flex items-center gap-6 text-sm font-medium text-green-700">
-          <Link href="/leaderboard" className="hover:text-green-900 transition-colors">{t("nav_leaderboard")}</Link>
-          <Link href="/chat" className="text-green-900 font-semibold underline underline-offset-4">{t("nav_chat")}</Link>
-          <LanguagePicker />
+    <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/bg-poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/50 z-[3]" />
+
+      <nav className="relative z-[10] flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
+        <Link href="/" className="text-lg font-bold text-white">🌿 Green AI</Link>
+        <div className="flex items-center gap-6 text-sm font-medium text-white/80">
+          <Link href="/leaderboard" className="hover:text-white transition-colors">{t("nav_leaderboard")}</Link>
+          <Link href="/chat" className="text-white font-semibold underline underline-offset-4">{t("nav_chat")}</Link>
+          <LanguagePicker light />
         </div>
       </nav>
 
-      <div className="flex flex-col flex-1 max-w-2xl mx-auto w-full px-4 pb-6 pt-6 gap-4 min-h-0">
+      <div className="relative z-[10] flex flex-col flex-1 max-w-2xl mx-auto w-full px-4 pb-6 pt-4 gap-4 min-h-0">
         <div className="flex items-center gap-2 shrink-0">
-          <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" />
-          <span className="text-sm font-semibold text-green-800">Mistral Small</span>
-          <span className="text-xs text-green-500 ml-1">{t("chat_status")}</span>
+          <span className="w-2.5 h-2.5 rounded-full bg-green-400 inline-block" />
+          <span className="text-sm font-semibold text-white">Mistral Small</span>
+          <span className="text-xs text-green-300 ml-1">{t("chat_status")}</span>
         </div>
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto flex flex-col gap-3 min-h-0">
           {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center flex-1 gap-3 py-16 text-center text-green-500">
+            <div className="flex flex-col items-center justify-center flex-1 gap-3 py-16 text-center">
               <span className="text-5xl">🌿</span>
-              <p className="text-base font-medium text-green-700">{t("chat_empty_title")}</p>
-              <p className="text-sm">{t("chat_empty_sub")}</p>
+              <p className="text-base font-medium text-white">{t("chat_empty_title")}</p>
+              <p className="text-sm text-white/60">{t("chat_empty_sub")}</p>
             </div>
           )}
           {messages.map((m, i) => (
