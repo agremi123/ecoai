@@ -315,6 +315,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_summarize: "精确总结任何文本——比其他选择更环保",
     proof_code: "代码和调试帮助同样出色——最环保的选择",
     proof_create: "创意想法同样丰富——能耗极低",
+    co2_saved: "🌱 与 ChatGPT 相比节省了 2.9 mg CO₂",
   },
   ja: {
     nav_leaderboard: "ランキング",
