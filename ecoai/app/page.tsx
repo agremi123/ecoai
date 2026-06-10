@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useLang, LanguagePicker } from "./i18n";
 
 const activityRankings: Record<string, string[]> = {
-  write:     ["Mistral Small", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
-  chat:      ["Mistral Small", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
-  translate: ["Gemini Flash", "Mistral Small", "Claude Haiku", "GPT-4o Mini"],
-  summarize: ["Claude Haiku", "Mistral Small", "Gemini Flash", "GPT-4o Mini"],
-  advice:    ["Mistral Small", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
-  create:    ["Claude Haiku", "Mistral Small", "Gemini Flash", "GPT-4o Mini"],
+  write:     ["GreenGPT", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
+  chat:      ["GreenGPT", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
+  translate: ["GreenGPT", "Gemini Flash", "Claude Haiku", "GPT-4o Mini"],
+  summarize: ["GreenGPT", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
+  advice:    ["GreenGPT", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
+  create:    ["GreenGPT", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
 };
 
 const rankBadges = ["🥇", "🥈", "🥉", "⚡"];
