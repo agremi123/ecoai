@@ -75,7 +75,7 @@ export default function Chat() {
       <div className="relative z-[10] flex flex-col flex-1 max-w-2xl mx-auto w-full px-4 pb-6 pt-4 gap-4 min-h-0">
         <div className="flex items-center gap-2 shrink-0">
           <span className="w-2.5 h-2.5 rounded-full bg-green-400 inline-block" />
-          <span className="text-sm font-semibold text-white">GreenGPT</span>
+          <span className="text-sm font-semibold text-white">Mistral Small</span>
           <span className="text-xs text-green-300 ml-1">{t("chat_status")}</span>
         </div>
 
