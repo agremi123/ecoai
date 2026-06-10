@@ -77,7 +77,7 @@ export default function Chat() {
           {messages.map((m, i) => (
             <div
               key={i}
-              className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
+              className={`flex flex-col ${m.role === "user" ? "items-end" : "items-start"}`}
             >
               <div
                 className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
@@ -88,6 +88,11 @@ export default function Chat() {
               >
                 {m.content}
               </div>
+              {m.role === "assistant" && (
+                <span className="mt-1 ml-1 text-xs text-green-600 bg-green-100 border border-green-200 rounded-full px-2.5 py-0.5 font-medium">
+                  {t("co2_saved")}
+                </span>
+              )}
             </div>
           ))}
           {loading && (
