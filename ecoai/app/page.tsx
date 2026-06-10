@@ -63,16 +63,14 @@ const models = [
 export default function Home() {
   return (
     <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/12426153_3840_2160_30fps.mp4" type="video/mp4" />
-      </video>
+      {/* Background YouTube video */}
+      <iframe
+        className="absolute z-0 pointer-events-none"
+        style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(1.5)", width: "100vw", height: "56.25vw", minHeight: "100vh", minWidth: "177.78vh" }}
+        src="https://www.youtube.com/embed/Ul6FvHnaZZc?autoplay=1&mute=1&loop=1&playlist=Ul6FvHnaZZc&controls=0&showinfo=0&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        title="background"
+      />
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
