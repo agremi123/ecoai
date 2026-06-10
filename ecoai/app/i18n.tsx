@@ -292,7 +292,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     chat_placeholder: "发送消息…",
     chat_send: "发送",
     chat_thinking: "思考中…",
-    activity_prompt: "你想做什么？",
+    activity_prompt: "你想用 AI 做什么？我们为你找到最环保的选项——同等质量，更少能耗。",
     activity_write: "写作",
     activity_chat: "提问",
     activity_translate: "翻译",
