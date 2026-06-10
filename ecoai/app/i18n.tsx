@@ -227,7 +227,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_chat: "Risponde altrettanto chiaramente — 3× meno energia di ChatGPT",
     proof_translate: "Traduce in 30+ lingue con precisione — impronta minima",
     proof_summarize: "Riassume qualsiasi testo con precisione — molto più verde",
-    proof_code: "Aiuta altrettanto bene col codice — la scelta più verde",
+    proof_advice: "Dà consigli chiari e riflessivi — come ChatGPT, 3× meno energia",
     proof_create: "Genera idee creative altrettanto bene — con molta meno energia",
     co2_saved: "🌱 Risparmiati {{amount}} mg CO₂ vs ChatGPT",
   },
