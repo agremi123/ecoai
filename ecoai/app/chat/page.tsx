@@ -51,9 +51,10 @@ export default function Chat() {
     <main className="h-screen bg-green-50 flex flex-col overflow-hidden">
       <nav className="flex items-center justify-between px-8 py-4 border-b border-green-200 bg-white/70 backdrop-blur shrink-0">
         <Link href="/" className="text-xl font-bold text-green-800">🌿 Green AI</Link>
-        <div className="flex gap-6 text-sm font-medium text-green-700">
-          <Link href="/leaderboard" className="hover:text-green-900 transition-colors">Leaderboard</Link>
-          <Link href="/chat" className="text-green-900 font-semibold underline underline-offset-4">Chat</Link>
+        <div className="flex items-center gap-6 text-sm font-medium text-green-700">
+          <Link href="/leaderboard" className="hover:text-green-900 transition-colors">{t("nav_leaderboard")}</Link>
+          <Link href="/chat" className="text-green-900 font-semibold underline underline-offset-4">{t("nav_chat")}</Link>
+          <LanguagePicker />
         </div>
       </nav>
 
