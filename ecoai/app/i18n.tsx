@@ -356,7 +356,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_chat: "同じくらい明確に質問に答えます — ChatGPT より3倍省エネ",
     proof_translate: "30以上の言語を正確に翻訳 — カーボンフットプリントは最小",
     proof_summarize: "どんなテキストも精密に要約 — はるかに環境にやさしい",
-    proof_code: "コードとデバッグを同じくらいうまく補助 — 最もグリーンな選択",
+    proof_advice: "明確で丁寧なアドバイスを提供 — ChatGPT と同等、エネルギーは3倍少ない",
     proof_create: "同じくらい豊かな創造的アイデア — わずかなエネルギーで",
     co2_saved: "🌱 ChatGPT より {{amount}} mg CO₂ 節約",
   },
