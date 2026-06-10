@@ -149,7 +149,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     nav_leaderboard: "Rangliste",
     nav_chat: "Chat",
     badge: "🌍 KI mit kleinerem Fußabdruck",
-    title: "Die grünste KI, direkt zur Hand",
+    title: "Die grünste KI, mit denselben Ergebnissen",
     subtitle: "Jeder KI-Chatbot verbraucht Strom — manche viel mehr als andere. Klicke unten, um mit der saubersten zu chatten.",
     ranking_title: "🏆 Welche KI verschmutzt am wenigsten?",
     ranking_subtitle: "Wenn du eine einzeilige Frage stellst und die KI in 2–3 Sätzen antwortet",
