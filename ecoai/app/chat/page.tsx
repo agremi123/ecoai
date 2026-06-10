@@ -93,7 +93,7 @@ export default function Chat() {
           {loading && (
             <div className="flex justify-start">
               <div className="bg-white border border-green-200 text-green-400 rounded-2xl rounded-bl-sm px-4 py-3 text-sm shadow-sm">
-                <span className="animate-pulse">Thinking…</span>
+                <span className="animate-pulse">{t("chat_thinking")}</span>
               </div>
             </div>
           )}
