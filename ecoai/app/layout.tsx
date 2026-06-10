@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EcoAI — Green AI Aggregator",
+  title: "Green AI",
   description: "Compare AI models by energy efficiency and chat with the greenest ones.",
 };
 
