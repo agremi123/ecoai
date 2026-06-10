@@ -143,7 +143,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_summarize: "Resume cualquier texto con precisión — mucho más verde",
     proof_code: "Ayuda a codificar y depurar igual de bien — la opción más verde",
     proof_create: "Genera ideas creativas igual de bien — con mucha menos energía",
-    co2_saved: "🌱 Ahorraste 2,9 mg CO₂ vs ChatGPT",
+    co2_saved: "🌱 Ahorraste {{amount}} mg CO₂ vs ChatGPT",
   },
   de: {
     nav_leaderboard: "Rangliste",
