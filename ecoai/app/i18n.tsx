@@ -192,7 +192,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     nav_leaderboard: "Classifica",
     nav_chat: "Chat",
     badge: "🌍 IA con un'impronta più piccola",
-    title: "L'IA più verde, a portata di mano",
+    title: "L'IA più verde, con gli stessi risultati",
     subtitle: "Ogni chatbot IA consuma elettricità — e alcuni molto più di altri. Clicca qui sotto per chattare con il più pulito.",
     ranking_title: "🏆 Quale IA inquina meno?",
     ranking_subtitle: "Quando invii una domanda di una riga e l'IA risponde in 2–3 frasi",
