@@ -303,7 +303,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     activity_chat: "提问",
     activity_translate: "翻译",
     activity_summarize: "总结",
-    activity_code: "代码帮助",
+    activity_advice: "寻求建议",
     activity_create: "获取创意",
     activity_reset: "更换活动",
     recommend_intro: "为此，我们推荐：",
