@@ -90,7 +90,7 @@ export default function Chat() {
               </div>
               {m.role === "assistant" && (
                 <span className="mt-1 ml-1 text-xs text-green-600 bg-green-100 border border-green-200 rounded-full px-2.5 py-0.5 font-medium">
-                  {t("co2_saved")}
+                  {t("co2_saved").replace("{{amount}}", ((Math.round(m.content.length / 4)) * 0.029).toFixed(1))}
                 </span>
               )}
             </div>
