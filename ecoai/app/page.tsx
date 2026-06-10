@@ -188,20 +188,20 @@ export default function Home() {
 
             {/* Leaderboard */}
             <div className="w-full max-w-lg flex flex-col gap-1.5">
-              {models.map((m) => (
+              {ranked.map((m, i) => (
                 <a
                   key={m.name}
                   href={m.url}
                   target={m.url.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color} ${m.rank === 1 ? "border-green-400/60" : ""}`}
+                  className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color} ${i === 0 ? "border-green-400/60" : ""}`}
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2 min-w-0">
-                      <span className="text-base leading-none shrink-0">{m.badge}</span>
+                      <span className="text-base leading-none shrink-0">{rankBadges[i]}</span>
                       <div className="min-w-0">
                         <span className="font-semibold text-white text-sm">{m.name}</span>
-                        {m.rank === 1 && (
+                        {i === 0 && (
                           <span className="text-xs font-semibold text-green-300 ml-2">{t("best_for_you")}</span>
                         )}
                       </div>
