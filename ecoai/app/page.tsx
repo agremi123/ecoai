@@ -19,7 +19,7 @@ const activities = [
   { id: "chat",      icon: "💬", key: "activity_chat" },
   { id: "translate", icon: "🌍", key: "activity_translate" },
   { id: "summarize", icon: "📝", key: "activity_summarize" },
-  { id: "code",      icon: "💻", key: "activity_code" },
+  { id: "advice",    icon: "💡", key: "activity_advice" },
   { id: "create",    icon: "🎨", key: "activity_create" },
 ];
 
