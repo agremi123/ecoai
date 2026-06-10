@@ -80,7 +80,7 @@ export default function Home() {
       {/* Blocks all YouTube UI (pause button, logo, etc) */}
       <div className="absolute inset-0 z-[2]" />
       {/* Dark green overlay for readability */}
-      <div className="absolute inset-0 bg-black/40 z-0" />
+      <div className="absolute inset-0 bg-black/40 z-[3]" />
       {/* Nav */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
         <span className="text-lg font-bold text-white">🌿 Green AI</span>
