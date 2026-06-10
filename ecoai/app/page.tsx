@@ -115,7 +115,9 @@ export default function Home() {
                     <span className="text-xs text-white/60 ml-1.5 hidden sm:inline">{t(m.blurbKey)}</span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-white/80 shrink-0">{t(m.impactKey)} →</span>
+                <span className="text-xs font-semibold text-white/80 shrink-0">
+                  {t(m.impactKey)} <span className="text-white/60 font-normal">· {(m.co2PerQuery * 1000).toFixed(1)} mg CO₂</span> →
+                </span>
               </div>
               <div className="w-full bg-green-200/60 rounded-full h-1">
                 <div className={`bg-green-600 h-1 rounded-full ${m.bar}`} />
