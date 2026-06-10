@@ -63,16 +63,11 @@ const models = [
 export default function Home() {
   return (
     <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="https://videos.pexels.com/video-files/28580911/12426153_1280_720_30fps.mp4" type="video/mp4" />
-      </video>
+      {/* Background gif */}
+      <div
+        className="absolute inset-0 w-full h-full z-0"
+        style={{ backgroundImage: "url('/12426153_3840_2160_30fps.gif')", backgroundSize: "cover", backgroundPosition: "center" }}
+      />
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-0" />
       {/* Nav */}
