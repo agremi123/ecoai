@@ -57,22 +57,18 @@ export default function Home() {
   const { t } = useLang();
   return (
     <main className="h-screen flex flex-col overflow-hidden relative bg-green-900">
-      {/* Thumbnail shown instantly while video loads */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('https://img.youtube.com/vi/Ul6FvHnaZZc/maxresdefault.jpg')` }}
-      />
-      {/* YouTube iframe fades in on load */}
-      <iframe
-        className="absolute z-[1] pointer-events-none transition-opacity duration-1000"
-        style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(1.5)", width: "100vw", height: "56.25vw", minHeight: "100vh", minWidth: "177.78vh" }}
-        src="https://www.youtube.com/embed/Ul6FvHnaZZc?autoplay=1&mute=1&loop=1&playlist=Ul6FvHnaZZc&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&vq=hd2160&hd=1"
-        allow="autoplay; encrypted-media"
-        title="background"
-        loading="eager"
-      />
-      {/* Blocks all YouTube UI (pause button, logo, etc) */}
-      <div className="absolute inset-0 z-[2]" />
+      {/* Background video — self-hosted, instant HD, no YouTube UI */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/bg-poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+      </video>
       {/* Dark green overlay for readability */}
       <div className="absolute inset-0 bg-black/40 z-[3]" />
       {/* Nav */}
