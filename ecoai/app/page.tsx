@@ -12,8 +12,8 @@ const models = [
     bar: "w-[29%]",
     color: "bg-white/20 backdrop-blur border-white/40 hover:bg-white/30",
     impact: "🟢 Very low",
-    smarts: "100",
-    smartsLabel: "IQ",
+    smarts: "⭐⭐",
+    smartsLabel: "Smart",
     url: "https://chat.mistral.ai",
   },
   {
