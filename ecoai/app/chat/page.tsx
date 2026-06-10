@@ -70,8 +70,8 @@ export default function Chat() {
           {messages.length === 0 && (
             <div className="flex flex-col items-center justify-center flex-1 gap-3 py-16 text-center text-green-500">
               <span className="text-5xl">🌿</span>
-              <p className="text-base font-medium text-green-700">Ask anything — with a clear conscience.</p>
-              <p className="text-sm">You&apos;re chatting with the most energy-efficient AI available.</p>
+              <p className="text-base font-medium text-green-700">{t("chat_empty_title")}</p>
+              <p className="text-sm">{t("chat_empty_sub")}</p>
             </div>
           )}
           {messages.map((m, i) => (
