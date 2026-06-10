@@ -346,7 +346,7 @@ const translations: Record<LangCode, Record<string, string>> = {
     activity_chat: "質問する",
     activity_translate: "翻訳する",
     activity_summarize: "要約する",
-    activity_code: "コード補助",
+    activity_advice: "アドバイスをもらう",
     activity_create: "アイデアを出す",
     activity_reset: "活動を変える",
     recommend_intro: "このタスクにはこちらをおすすめします：",
