@@ -138,7 +138,7 @@ export default function Home() {
               ))}
             </div>
             {/* Ranking preview */}
-            <div className="w-full flex flex-col gap-1 mt-1">
+            <div className="w-full flex flex-col gap-2 sm:gap-1 mt-2 sm:mt-1">
               {models.map((m) => (
                 <a
                   key={m.name}
