@@ -55,8 +55,8 @@ export default function Leaderboard() {
       <nav className="flex items-center justify-between px-8 py-4 border-b border-green-200 bg-white/70 backdrop-blur sticky top-0 z-10">
         <Link href="/" className="text-xl font-bold text-green-800">🌿 GreenGPT</Link>
         <div className="flex gap-6 text-sm font-medium text-green-700">
-          <Link href="/leaderboard" className="text-green-900 font-semibold underline underline-offset-4">Leaderboard</Link>
-          <Link href="/chat" className="hover:text-green-900 transition-colors">Chat</Link>
+          <Link href="/leaderboard" className="hidden sm:inline text-green-900 font-semibold underline underline-offset-4">Leaderboard</Link>
+          <Link href="/chat" className="hidden sm:inline hover:text-green-900 transition-colors">Chat</Link>
         </div>
       </nav>
 
