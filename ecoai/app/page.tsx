@@ -123,9 +123,9 @@ export default function Home() {
 
         {activity === null ? (
           /* Step 1 — Activity picker */
-          <div className="w-full max-w-lg flex flex-col gap-2">
+          <div className="w-full max-w-lg flex flex-col gap-4 sm:gap-2">
             <h2 className="text-sm font-bold text-white text-center drop-shadow">{t("activity_prompt")}</h2>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-3 sm:gap-2">
               {activities.map((a) => (
                 <button
                   key={a.id}
