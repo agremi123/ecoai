@@ -103,8 +103,8 @@ export default function Home() {
       <nav className="relative z-[10] flex items-center justify-between px-8 py-3 border-b border-white/20 bg-black/20 backdrop-blur shrink-0">
         <span className="text-lg font-bold text-white">🌿 GreenGPT</span>
         <div className="flex items-center gap-6 text-sm font-medium text-white/80">
-          <Link href="/leaderboard" className="hover:text-white transition-colors">{t("nav_leaderboard")}</Link>
-          <Link href="/chat" className="hover:text-white transition-colors">{t("nav_chat")}</Link>
+          <Link href="/leaderboard" className="hidden sm:inline hover:text-white transition-colors">{t("nav_leaderboard")}</Link>
+          <Link href="/chat" className="hidden sm:inline hover:text-white transition-colors">{t("nav_chat")}</Link>
           <LanguagePicker light />
         </div>
       </nav>
