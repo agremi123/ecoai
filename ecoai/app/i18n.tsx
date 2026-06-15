@@ -63,6 +63,10 @@ const translations: Record<LangCode, Record<string, string>> = {
     waitlist_button: "Join the waitlist",
     waitlist_success: "You're on the list! 🌱 Thanks for joining.",
     waitlist_error: "Hmm, that didn't work. Try again?",
+    chat_try_label: "Not sure what to ask? Try one:",
+    chat_ex1: "✍️ Write a polite email asking for a deadline extension",
+    chat_ex2: "💡 Explain photosynthesis in simple terms",
+    chat_ex3: "🍽️ Give me 5 quick dinner ideas with chicken",
   },
   fr: {
     nav_leaderboard: "Classement",
