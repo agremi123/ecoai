@@ -205,6 +205,7 @@ export default function Home() {
                   href={m.url}
                   target={m.url.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
+                  onClick={() => track("model_clicked", { model: m.name, where: "leaderboard" })}
                   className={`rounded-xl border-2 px-4 py-2 flex flex-col gap-1 cursor-pointer transition-all ${m.color} ${i === 0 ? "border-green-400/60" : ""}`}
                 >
                   <div className="flex items-center justify-between gap-2">
