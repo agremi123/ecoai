@@ -219,6 +219,10 @@ const translations: Record<LangCode, Record<string, string>> = {
     waitlist_button: "Auf die Warteliste",
     waitlist_success: "Du bist dabei! 🌱 Danke.",
     waitlist_error: "Hat nicht geklappt. Nochmal versuchen?",
+    chat_try_label: "Keine Idee? Probiere:",
+    chat_ex1: "✍️ Schreibe eine höfliche E-Mail mit Bitte um Fristverlängerung",
+    chat_ex2: "💡 Erkläre Photosynthese einfach",
+    chat_ex3: "🍽️ Gib mir 5 schnelle Abendessen-Ideen mit Hähnchen",
   },
   it: {
     nav_leaderboard: "Classifica",
