@@ -375,6 +375,10 @@ const translations: Record<LangCode, Record<string, string>> = {
     waitlist_button: "加入候补名单",
     waitlist_success: "已加入名单！🌱 感谢。",
     waitlist_error: "出错了，请重试？",
+    chat_try_label: "不知道问什么？试试：",
+    chat_ex1: "✍️ 写一封礼貌的邮件申请延期",
+    chat_ex2: "💡 用简单的话解释光合作用",
+    chat_ex3: "🍽️ 给我5个用鸡肉做的快手晚餐点子",
   },
   ja: {
     nav_leaderboard: "ランキング",
