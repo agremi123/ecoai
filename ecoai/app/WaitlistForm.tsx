@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { useLang } from "./i18n";
 
 // Formspree endpoint (free, no backend needed). Public by design — safe to hardcode.
