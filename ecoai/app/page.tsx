@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useLang, LanguagePicker } from "./i18n";
+import WaitlistForm from "./WaitlistForm";
 
 const activityRankings: Record<string, string[]> = {
   write:     ["Mistral Small", "Claude Haiku", "Gemini Flash", "GPT-4o Mini"],
