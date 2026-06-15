@@ -346,6 +346,11 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_advice: "给出清晰、周到的建议——和 ChatGPT 一样好，能耗减少 3 倍",
     proof_create: "创意想法同样丰富——能耗极低",
     co2_saved: "🌱 与 ChatGPT 相比节省了 {{amount}} mg CO₂",
+    waitlist_prompt: "抢先体验全新的环保 AI 工具",
+    waitlist_placeholder: "你的@邮箱.com",
+    waitlist_button: "加入候补名单",
+    waitlist_success: "已加入名单！🌱 感谢。",
+    waitlist_error: "出错了，请重试？",
   },
   ja: {
     nav_leaderboard: "ランキング",
