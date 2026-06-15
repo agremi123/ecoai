@@ -202,6 +202,11 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_advice: "Gibt klare, durchdachte Ratschläge — wie ChatGPT, 3× weniger Energie",
     proof_create: "Generiert genauso kreative Ideen — bei einem Bruchteil der Energie",
     co2_saved: "🌱 {{amount}} mg CO₂ gespart vs. ChatGPT",
+    waitlist_prompt: "Früher Zugang zu neuen grünen KI-Tools",
+    waitlist_placeholder: "deine@email.com",
+    waitlist_button: "Auf die Warteliste",
+    waitlist_success: "Du bist dabei! 🌱 Danke.",
+    waitlist_error: "Hat nicht geklappt. Nochmal versuchen?",
   },
   it: {
     nav_leaderboard: "Classifica",
