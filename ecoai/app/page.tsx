@@ -181,6 +181,7 @@ export default function Home() {
                   href={top.url}
                   target={top.url.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
+                  onClick={() => track("try_it_clicked", { model: top.name, activity })}
                   className="bg-green-500 hover:bg-green-400 text-white text-xs font-semibold px-4 py-1.5 rounded-lg transition-colors shrink-0"
                 >
                   {t("try_it")} →
