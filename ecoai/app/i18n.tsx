@@ -323,6 +323,10 @@ const translations: Record<LangCode, Record<string, string>> = {
     waitlist_button: "Entrar na lista",
     waitlist_success: "Você está na lista! 🌱 Obrigado.",
     waitlist_error: "Algo deu errado. Tentar de novo?",
+    chat_try_label: "Sem ideias? Experimente:",
+    chat_ex1: "✍️ Escreva um email educado pedindo mais prazo",
+    chat_ex2: "💡 Explique a fotossíntese de forma simples",
+    chat_ex3: "🍽️ Dê-me 5 ideias rápidas de jantar com frango",
   },
   zh: {
     nav_leaderboard: "排行榜",
