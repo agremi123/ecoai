@@ -147,6 +147,7 @@ export default function Home() {
                   href={m.url}
                   target={m.url.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
+                  onClick={() => track("model_clicked", { model: m.name, where: "preview" })}
                   className={`rounded-xl border px-3 py-1.5 flex items-center gap-2 bg-white/20 backdrop-blur hover:bg-white/30 transition-all cursor-pointer ${m.rank === 1 ? "border-green-400/60" : "border-white/25"}`}
                 >
                   <span className="text-sm leading-none shrink-0">{m.badge}</span>
