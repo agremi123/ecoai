@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { useLang } from "./i18n";
 
-// Formspree endpoint (free, no backend needed). Set in Vercel env.
-// e.g. https://formspree.io/f/abcdwxyz
-const ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+// Formspree endpoint (free, no backend needed). Public by design — safe to hardcode.
+// Can be overridden via NEXT_PUBLIC_FORMSPREE_ENDPOINT env var.
+const ENDPOINT =
+  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/mqeongbn";
 
 export default function WaitlistForm() {
   const { t } = useLang();
