@@ -394,6 +394,11 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_advice: "明確で丁寧なアドバイスを提供 — ChatGPT と同等、エネルギーは3倍少ない",
     proof_create: "同じくらい豊かな創造的アイデア — わずかなエネルギーで",
     co2_saved: "🌱 ChatGPT より {{amount}} mg CO₂ 節約",
+    waitlist_prompt: "新しいグリーンAIツールに早期アクセス",
+    waitlist_placeholder: "your@email.com",
+    waitlist_button: "ウェイトリストに登録",
+    waitlist_success: "登録完了！🌱 ありがとう。",
+    waitlist_error: "うまくいきませんでした。もう一度お試しを。",
   },
 };
 
