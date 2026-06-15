@@ -21,9 +21,15 @@ export default function Chat() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  async function send() {
-    const text = input.trim();
+  async function send(textArg?: string) {
+    const text = (textArg ?? input).trim();
     if (!text || loading) return;
+
+    // Journey tracking: did they send their first message, and how?
+    track("chat_message_sent", {
+      via: textArg ? "example" : "typed",
+      first: messages.length === 0,
+    });
 
     const next: Message[] = [...messages, { role: "user", content: text }];
     setMessages(next);
