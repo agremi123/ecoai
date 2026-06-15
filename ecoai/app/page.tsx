@@ -131,7 +131,7 @@ export default function Home() {
               {activities.map((a) => (
                 <button
                   key={a.id}
-                  onClick={() => setActivity(a.id)}
+                  onClick={() => { setActivity(a.id); track("activity_selected", { activity: a.id }); }}
                   className="flex flex-col items-center gap-1 bg-white/20 backdrop-blur border border-white/40 hover:bg-white/30 active:bg-white/40 rounded-xl px-3 py-3 transition-all cursor-pointer"
                 >
                   <span className="text-2xl leading-none">{a.icon}</span>
