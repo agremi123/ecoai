@@ -28,6 +28,7 @@ export default function WaitlistForm() {
         body: JSON.stringify({ email }),
       });
       if (!res.ok) throw new Error("failed");
+      track("waitlist_signup");
       setStatus("done");
       setEmail("");
     } catch {
