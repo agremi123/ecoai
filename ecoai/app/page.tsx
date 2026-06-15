@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 import { useLang, LanguagePicker } from "./i18n";
 import WaitlistForm from "./WaitlistForm";
 
