@@ -167,6 +167,10 @@ const translations: Record<LangCode, Record<string, string>> = {
     waitlist_button: "Unirme a la lista",
     waitlist_success: "¡Estás en la lista! 🌱 Gracias.",
     waitlist_error: "Algo falló. ¿Intentar de nuevo?",
+    chat_try_label: "¿No sabes qué preguntar? Prueba:",
+    chat_ex1: "✍️ Escribe un email cortés pidiendo una prórroga",
+    chat_ex2: "💡 Explica la fotosíntesis de forma sencilla",
+    chat_ex3: "🍽️ Dame 5 ideas rápidas de cena con pollo",
   },
   de: {
     nav_leaderboard: "Rangliste",
