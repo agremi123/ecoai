@@ -427,6 +427,10 @@ const translations: Record<LangCode, Record<string, string>> = {
     waitlist_button: "ウェイトリストに登録",
     waitlist_success: "登録完了！🌱 ありがとう。",
     waitlist_error: "うまくいきませんでした。もう一度お試しを。",
+    chat_try_label: "何を聞く？こちらをどうぞ：",
+    chat_ex1: "✍️ 締め切り延長を頼む丁寧なメールを書いて",
+    chat_ex2: "💡 光合成を簡単に説明して",
+    chat_ex3: "🍽️ 鶏肉で作れる夕食のアイデアを5つ教えて",
   },
 };
 
