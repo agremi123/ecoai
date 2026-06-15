@@ -69,6 +69,9 @@ export async function POST(req: NextRequest) {
   // Only send the most recent messages to keep token usage bounded.
   const trimmed = messages.slice(-MAX_MESSAGES_KEPT);
 
+  // Clear marker in Vercel logs: a real chat message was sent.
+  console.log(`[CHAT] message sent from ${ip} (${messages.length} in convo)`);
+
   let res;
   try {
     res = await fetch("https://api.mistral.ai/v1/chat/completions", {
