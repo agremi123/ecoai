@@ -157,6 +157,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
+            <WaitlistForm />
             <p className="text-xs text-white/50 text-center">
               <Link href="/leaderboard" className="underline hover:text-white transition-colors">{t("full_details")}</Link>
             </p>
