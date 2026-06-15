@@ -89,10 +89,22 @@ export default function Chat() {
         {/* Messages */}
         <div className="flex-1 overflow-y-auto flex flex-col gap-3 min-h-0">
           {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center flex-1 gap-3 py-16 text-center">
+            <div className="flex flex-col items-center justify-center flex-1 gap-3 py-10 text-center">
               <span className="text-5xl">🌿</span>
               <p className="text-base font-medium text-white">{t("chat_empty_title")}</p>
               <p className="text-sm text-white/60">{t("chat_empty_sub")}</p>
+              <p className="text-xs text-white/50 mt-3">{t("chat_try_label")}</p>
+              <div className="flex flex-col gap-2 w-full max-w-sm">
+                {["chat_ex1", "chat_ex2", "chat_ex3"].map((key) => (
+                  <button
+                    key={key}
+                    onClick={() => send(t(key))}
+                    className="text-left text-sm text-white bg-white/15 hover:bg-white/25 backdrop-blur border border-white/30 rounded-xl px-4 py-2.5 transition-colors cursor-pointer"
+                  >
+                    {t(key)}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
           {messages.map((m, i) => (
