@@ -58,6 +58,11 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_advice: "Gives you clear, thoughtful advice — just like ChatGPT, 3× less energy",
     proof_create: "Sparks creative ideas just as well — at a fraction of the energy",
     co2_saved: "🌱 Saved {{amount}} mg CO₂ vs ChatGPT",
+    waitlist_prompt: "Get early access to new green AI tools",
+    waitlist_placeholder: "your@email.com",
+    waitlist_button: "Join the waitlist",
+    waitlist_success: "You're on the list! 🌱 Thanks for joining.",
+    waitlist_error: "Hmm, that didn't work. Try again?",
   },
   fr: {
     nav_leaderboard: "Classement",
