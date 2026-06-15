@@ -298,6 +298,11 @@ const translations: Record<LangCode, Record<string, string>> = {
     proof_advice: "Dá conselhos claros e ponderados — como ChatGPT, 3× menos energia",
     proof_create: "Gera ideias criativas tão bem — com muito menos energia",
     co2_saved: "🌱 Economizou {{amount}} mg CO₂ vs ChatGPT",
+    waitlist_prompt: "Acesso antecipado a novas ferramentas de IA verde",
+    waitlist_placeholder: "seu@email.com",
+    waitlist_button: "Entrar na lista",
+    waitlist_success: "Você está na lista! 🌱 Obrigado.",
+    waitlist_error: "Algo deu errado. Tentar de novo?",
   },
   zh: {
     nav_leaderboard: "排行榜",
